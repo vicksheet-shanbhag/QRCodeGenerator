@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>QR Code Generator</h1>
+    <form [formGroup] = "generateQR" (ngSubmit) = "generate()" class="inner-box">
+      <input type="text" id="qrcode-content" placeholder="Enter content to generate QR code" formControlName = "qrcodeString"/><br/>
+      <button class="generateBtn">Generate</button>
+    </form>
+
+  <div class="qrcodeImage" *ngIf="qrData">
+    <qrcode
+      #qrCode
+      [qrdata]="qrData"
+      [allowEmptyString]="false"
+      [ariaLabel]="'QR Code image with the following content...'"
+      [cssClass]="'center'"
+      [colorDark]="'#000000ff'"
+      [colorLight]="'#F5F5DC'"
+      [elementType]="'img'"
+      [errorCorrectionLevel]="'M'"
+      [margin]="4"
+      [scale]="1"
+      [title]="'QrCode'"
+      [width]="300"
+      (qrCodeURL) = "onChangeURL($event)"
+    ></qrcode>
+    <button class="downloadBtn"><a [href]="qrCodeDownloadLink" download="qrcode.png">Download QR Code Image</a></button>
+  </div>
+</div>

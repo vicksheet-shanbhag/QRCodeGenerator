@@ -1,0 +1,82 @@
+.inner-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: auto;
+    height: auto;
+    background-color: beige;
+    padding: 5%;
+    margin: 20%;
+    border-radius: 5%;
+}
+
+#qrcode-content{
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+}
+
+.generateBtn{
+    width: 50%;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;  
+    justify-content: center;
+    flex: 3;
+    border-radius: 20px;
+    background-color: #00CCFF;
+    display: flex;
+
+}
+
+.downloadBtn{
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;  
+    justify-content: center;
+    flex: 3;
+    border-radius: 20px;
+    background-color: #00CCFF;
+    display: flex;
+}
+
+
+/* The div container */
+.qrcodeImage {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Add custom styles here */
+  .center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+.center-content{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    margin-right: 50%;
+}
+
+a{
+    text-decoration: none;
+}
+
+

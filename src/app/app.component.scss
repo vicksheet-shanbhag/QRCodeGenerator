@@ -6,12 +6,11 @@
 }
 
 .container{
-    width: auto;
-    height: auto;
+    width: 50%;
     background-color: beige;
     padding: 5%;
-    margin: 20%;
-    border-radius: 5%;
+    margin: 100px;
+    border-radius: 20px;
 }
 
 #qrcode-content{
@@ -77,6 +76,16 @@ h1{
 
 a{
     text-decoration: none;
+}
+
+.main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.alert{
+    color: red;
 }
 
 

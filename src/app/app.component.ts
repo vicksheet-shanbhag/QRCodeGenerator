@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl , FormGroup, Validators } from '@angular/forms';
+import { FormControl , FormGroup, Validators , ReactiveFormsModule} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SafeUrl } from '@angular/platform-browser';
 
@@ -19,6 +19,7 @@ export class AppComponent {
     qrcodeString: new FormControl('',Validators.required)
   });
   generate(){
+  
     if(this.generateQR.controls['qrcodeString'].value != ""){
       this.qrData = this.generateQR.value['qrcodeString'];
     }

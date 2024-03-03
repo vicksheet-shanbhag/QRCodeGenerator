@@ -1,7 +1,9 @@
-<div class="container">
+<div class="main">
+  <div class="container">
     <h1>QR Code Generator</h1>
     <form [formGroup] = "generateQR" (ngSubmit) = "generate()" class="inner-box">
       <input type="text" id="qrcode-content" placeholder="Enter content to generate QR code" formControlName = "qrcodeString"/><br/>
+      <div *ngIf="generateQR.invalid" class="alert alert-info">{{ message }}</div>
       <button class="generateBtn">Generate</button>
     </form>
 
@@ -24,4 +26,5 @@
     ></qrcode>
     <button class="downloadBtn"><a [href]="qrCodeDownloadLink" download="qrcode.png">Download QR Code Image</a></button>
   </div>
+</div>
 </div>

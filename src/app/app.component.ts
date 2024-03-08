@@ -22,6 +22,9 @@ export class AppComponent {
   
     if(this.generateQR.controls['qrcodeString'].value != ""){
       this.qrData = this.generateQR.value['qrcodeString'];
+    } else {
+      this.generateQR.controls['qrcodeString'].setErrors({'required': true});
+      this.generateQR.markAsTouched();
     }
 
   }
